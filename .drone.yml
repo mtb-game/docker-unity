@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: docker
+
+steps:
+  - name: docker hub
+    image: plugins/docker
+    settings:
+      username: loeffel
+      password:
+        from_secret: DOCKER_PASSWORD
+      dockerfile: docker/Dockerfile
+      auto_tag: true
+      repo: mtbgame/unity
+    when:
+      event: tag
