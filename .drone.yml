@@ -9,7 +9,7 @@ steps:
       username: loeffel
       password:
         from_secret: DOCKER_PASSWORD
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile
       auto_tag: true
       repo: mtbgame/unity
     when:
